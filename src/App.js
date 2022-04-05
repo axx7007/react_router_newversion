@@ -8,7 +8,12 @@ import {Navigate, Route, Routes} from 'react-router-dom'
 function App() {
   return (
     <div>
-      <Navbar />
+      <Routes>
+      <Route path='/home' element={<Navbar/>} />
+        <Route path='/contact' element={<Navbar/>} />
+        <Route path='/members' element={<Navbar />}/>
+        <Route path='/' element={<Navigate to={'/home'} />} />
+      </Routes>
       <Routes>
         <Route path='/home' element={<Home />} />
         <Route path='/contact' element={<Contact/>} />
