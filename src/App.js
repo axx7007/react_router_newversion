@@ -13,8 +13,8 @@ function App() {
         <Route path='/home' element={<Home />} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/members' element={<Members />}/>
-
         <Route path='/' element={<Navigate to={'/home'} />} />
+        <Route path='*' element={<h1>404 not found</h1>}/>
       </Routes>
       
     </div>
